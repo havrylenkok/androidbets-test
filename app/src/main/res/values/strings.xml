@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Unusual and Ironic Bet App Name</string>
+    <string name="go_button_text">Go get me that pile of money, son!</string>
+    <string name="progressbar_text">Money on Lambo you always wanted</string>
+    <string name="last_winner">Last winner: </string>
+    <string name="bet_on">Bet on: </string>
+    <string name="tries">Try №</string>
+</resources>
