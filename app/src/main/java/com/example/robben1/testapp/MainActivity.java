@@ -1,6 +1,7 @@
 package com.example.robben1.testapp;
 
 import android.content.pm.ActivityInfo;
+import android.graphics.Point;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
@@ -68,15 +69,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
         for (int i = 0; i < imageViews.length; i++) {
             imageViews[i].clearAnimation();
-        }
-        for (int i = 0; i < imageViews.length; i++) {
             imageViews[i].setX(0);
         }
         if(playersBet == id) {
-            playersBet += betSize * rate;
+            System.out.println("BET IS RIGHT");
             ProgressBar pb = (ProgressBar)findViewById(R.id.progressBar);
-            progress = progress + progress;
-            pb.setProgress(progress);
+            System.out.println("Progress: " + progress);
+            pb.setProgress(pb.getProgress() + progress);
         }
     }
 
@@ -109,7 +108,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        finishX = getWindowManager().getDefaultDisplay().getWidth();
+//deprecated        finishX = getWindowManager().getDefaultDisplay().getWidth();
+        Point size = new Point();
+        getWindowManager().getDefaultDisplay().getSize(size);
+        finishX = size.x - size.x / 11;
 
         Button buttonGo = (Button) findViewById(R.id.buttonGo);
         buttonGo.setOnClickListener(new HandleClickStart());
