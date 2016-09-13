@@ -75,6 +75,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         if(playersBet == id) {
             playersBet += betSize * rate;
             ProgressBar pb = (ProgressBar)findViewById(R.id.progressBar);
+            progress = progress + progress;
             pb.setProgress(progress);
         }
     }
